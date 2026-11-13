@@ -101,3 +101,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media (max-width:960px){.specs{grid-template-columns:1fr 1fr}.stop{grid-template-columns:40px 1fr}.stop .pic{grid-column:2}.callout{grid-template-columns:1fr}.clips{grid-template-columns:1fr 1fr}}
 @media (max-width:760px){.menu{display:block}nav ul{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;gap:0;background:#0b0b0c;padding:8px 28px 16px;border-bottom:1px solid var(--line)}nav ul.open{display:flex}nav ul a{display:block;padding:12px 0}}
 @media (max-width:600px){.specs,.clips{grid-template-columns:1fr}.gallery{columns:2 140px;column-gap:8px}.gallery figure{margin-bottom:8px}figcaption{display:none}.ch-head{grid-template-columns:1fr;gap:6px}.ch-num{font-size:3rem}.count{gap:22px;flex-wrap:nowrap}.count b{font-size:2.2rem}.count small{font-size:.62rem;letter-spacing:.12em}section{padding-top:70px}.callout .c{padding:28px}.hero{background-position:58% 70%}}
+/* lately cards (home) */
+.lately{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:10px}
+.card{text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-3px);border-color:#3a3a40}
+.card .pic{position:relative;aspect-ratio:16/10;overflow:hidden;background:#000}
+.card .pic img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover .pic img{transform:scale(1.05)}
+.card .play{position:absolute;right:12px;bottom:10px;width:40px;height:40px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:.95rem;padding-left:3px}
+.card .when{font-family:var(--head);letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:700;font-size:.82rem;margin:16px 18px 4px}
+.card h3{font-size:1.55rem;font-weight:800;margin:0 18px}
+.card p{color:#b9b9c0;font-size:.93rem;margin:8px 18px 18px}
+/* youtube + single clips */
+.yt{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000;margin-top:12px}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.note{color:var(--muted);font-size:.9rem;margin:10px 0 0}.note a{color:#d6d6da}
+.clips.one{grid-template-columns:1fr}
+.clips.one video{aspect-ratio:16/9;max-height:78vh}
+@media (max-width:960px){.lately{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.lately{grid-template-columns:1fr}}
